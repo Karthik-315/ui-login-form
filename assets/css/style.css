@@ -1,0 +1,424 @@
+body{
+    border: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Mukta', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Resuable (Generic) styles */
+
+
+/* End of Resuable styles */
+
+.container{
+    height: 100%;
+}
+
+/* Header styling */
+
+header{
+    background: #333;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+header div h1{
+    font-size: 35px;
+    margin:0;
+    padding: 0;
+    color: #ccc;
+}
+
+header div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+
+header div a:hover{
+    color: white;
+}
+
+/* End of Header styling */
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+}
+
+/* Setting equal column width for all elements under container using flex-basis */
+.main-content > *{
+    text-align: center;
+    margin: 0 auto;
+    flex: 1 1 0px;
+}
+
+/* Left side logo and image */
+
+h1{
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.pwd-mgr-logo{
+    width: 40%;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.avatar{
+    width: 15%;
+}
+
+/* Right side - Login form design */
+
+.right h3{
+    margin: 1px auto;
+    font-size: 35px;
+    
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+input[type=text], 
+input[type="password"]{
+    margin: 10px 175px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #333;
+}
+
+input[type=text]:hover, 
+input[type="password"]:hover,
+input[type="checkbox"]:hover{
+    border: 1px solid rgb(77, 154, 255);
+    outline: rgb(77, 154, 255);
+}
+
+
+input[type=text]:focus, 
+input[type="password"]:focus,
+input[type="checkbox"]:focus{
+    border: 1px solid rgb(77, 154, 255);
+    outline: rgb(77, 154, 255);
+}
+
+input[type="submit"]{
+    margin: 10px 175px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(77, 154, 255);
+    border: 1px solid transparent;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: white;
+    color: rgb(0, 110, 255);
+    box-shadow: 3px 3px 5px rgba(148, 200, 248, 0.4);
+    border: 1px solid rgba(0, 110, 255, 0.3);
+}
+
+input[type="submit"]:focus{
+    border: 1px solid rgb(0, 110, 255);
+    border-bottom: 3px solid rgb(0, 110, 255);
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+.forgot-password, 
+footer a{
+    text-decoration: none;
+    color: #333;
+    margin: 0;
+}
+
+.forgot-password:visited, 
+footer a:visited {
+    color: #333;
+}
+
+.forgot-password:hover, 
+footer a:hover {
+    color: rgb(0, 110, 255);
+}
+
+.password-recovery{
+    margin: 10px 175px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* Footer design */
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background:rgb(230, 230, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.designed-by, .image-credits{
+    font-size: 14px;
+    width: 50%;
+}
+
+/* Responsive Design */
+
+@media(max-width: 1025px){
+
+    header div h1{
+        font-size: 28px;
+    }
+    
+    header div a{
+        font-size: 16px;
+    }
+
+    .main-content{
+        margin: 10px auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-content h1, .main-content h3{
+        margin: 10px auto;
+    }
+
+    .tag-line{
+        font-size: 22px;
+    }
+
+    .avatar{
+        display: none;
+    }
+
+    .right{
+        margin: 0;
+        width: 100%;
+    }
+
+    input[type=text], 
+    input[type="password"]{
+        margin: 10px 200px;
+    }
+
+    input[type="submit"]{
+        margin: 10px 200px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    .password-recovery{
+        margin: 10px 200px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        align-items: center;
+    }
+}
+
+@media(max-width: 650px){
+
+    header div h1{
+        font-size: 28px;
+    }
+    
+    header div a{
+        font-size: 16px;
+    }
+
+    .main-content{
+        margin: 10px auto;
+        flex-direction: column;
+        line-height: 25px;
+    }
+
+    .main-content h1, .main-content h3{
+        margin: 10px auto;
+    }
+
+    h1{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    
+    .pwd-mgr-logo{
+        width: 30%;
+    }
+    
+    .tag-line{
+        font-size: 18px;
+    }
+    
+    .right h3{
+        margin: 1px auto;
+        font-size: 22px;
+        margin-top: 30px;    
+    }    
+
+    input[type=text], 
+    input[type="password"]{
+        margin: 10px 100px;
+    }
+
+    input[type="submit"]{
+        margin: 10px 100px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .password-recovery{
+        margin: 10px 100px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        align-items: center;
+    }
+    
+    .designed-by, .image-credits{
+        font-size: 12px;
+        width: 50%;
+    }
+}
+
+@media(max-width: 415px){
+
+    header div h1{
+        font-size: 28px;
+    }
+    
+    header div a{
+        font-size: 16px;
+    }
+
+    .main-content{
+        margin: 10px auto;
+        flex-direction: column;
+        line-height: 25px;
+    }
+
+    .main-content h1, .main-content h3{
+        margin: 10px auto;
+    }
+
+    h1{
+        font-size: 25px;
+        font-weight: normal;
+    }
+    
+    .pwd-mgr-logo{
+        width: 30%;
+    }
+    
+    .tag-line{
+        font-size: 18px;
+    }
+    
+    .right h3{
+        margin: 1px auto;
+        font-size: 22px;
+        margin-top: 30px;    
+    }    
+
+    input[type=text], 
+    input[type="password"]{
+        margin: 10px 80px;
+    }
+
+    input[type="submit"]{
+        margin: 10px 80px;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .password-recovery{
+        margin: 10px 80px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        align-items: center;
+    }
+    
+    .designed-by, .image-credits{
+        font-size: 12px;
+        width: 50%;
+    }
+}
+
+@media(max-width: 376px){  
+
+    .tag-line{
+        font-size: 16px;
+    }
+
+    .password-recovery{
+        margin: 10px 80px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .designed-by, .image-credits{
+        font-size: 10px;
+        width: 50%;
+    }
+}
+
+@media(max-width: 321px){  
+
+    .tag-line{
+        font-size: 14px;
+    }
+
+    input[type=text], 
+    input[type="password"]{
+        margin: 10px 70px;
+    }
+
+    input[type="submit"]{
+        margin: 10px 70px;
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+
+    .password-recovery{
+        margin: 10px 70px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .designed-by, .image-credits{
+        font-size: 10px;
+        width: 50%;
+    }
+}
